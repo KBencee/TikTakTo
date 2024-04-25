@@ -37,13 +37,18 @@ namespace TikTakTo
 
         public void GenerateMatrix()
         {
+            int[] szamok = { 1, 2, 3, 4, 5, 6, 7, 8,9 };
+            int[] shuffled = szamok.OrderBy(n => Guid.NewGuid()).ToArray();
+            MessageBox.Show(shuffled[0].ToString());
+            int counter = 0;
             matrix = new int[size, size];
             Random r = new();
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    matrix[i, j] = r.Next(1, 9);
+                    matrix[i, j] = shuffled[counter];
+                    counter++;
                 }
             }
         }
