@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TikTakTo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TiliToli" Height="450" Width="500">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row="1" x:Name="JatekGrid">
+        </Grid>
     </Grid>
 </Window>
