@@ -81,7 +81,7 @@ namespace TikTakTo
             Button current = sender as Button;
             int row = Grid.GetRow(current);
             int column = Grid.GetColumn(current);
-            if (current.IsEnabled = true &&)
+            if (current.IsEnabled == true &&)
 
             ShowMatrix();
         }
