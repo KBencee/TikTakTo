@@ -62,6 +62,10 @@ namespace TikTakTo
                 {
                     Button b = new();
                     b.Content = matrix[i, j];
+                    if (b.Content == "9")
+                    {
+                        b.Background = new SolidColorBrush(Colors.Gray); b.Foreground = new SolidColorBrush(Colors.Gray);
+                    }
                     b.HorizontalAlignment = HorizontalAlignment.Stretch;
                     b.VerticalAlignment = VerticalAlignment.Stretch;
                     Grid.SetRow(b, i);
