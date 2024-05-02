@@ -64,22 +64,25 @@ namespace TikTakTo
                     if (matrix[i, j] == 9)
                     {
                         b.Background = new SolidColorBrush(Colors.Gray); b.Foreground= new SolidColorBrush(Colors.Gray);
+                        b.IsEnabled = false;
                     }
                     b.HorizontalAlignment = HorizontalAlignment.Stretch;
                     b.VerticalAlignment = VerticalAlignment.Stretch;
                     Grid.SetRow(b, i);
                     Grid.SetColumn(b, j);
-                    b.Click += lerak_Click;
+                    b.Click += csere_Click;
                     JatekGrid.Children.Add(b);
                 }
             }
         }
 
-        private void lerak_Click(object sender, RoutedEventArgs e)
+        private void csere_Click(object sender, RoutedEventArgs e)
         {
             Button current = sender as Button;
             int row = Grid.GetRow(current);
             int column = Grid.GetColumn(current);
+            if (current.IsEnabled = true &&)
+
             ShowMatrix();
         }
     }
