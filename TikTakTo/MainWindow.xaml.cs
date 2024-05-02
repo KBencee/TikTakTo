@@ -39,7 +39,6 @@ namespace TikTakTo
         {
             int[] szamok = { 1, 2, 3, 4, 5, 6, 7, 8,9 };
             int[] shuffled = szamok.OrderBy(n => Guid.NewGuid()).ToArray();
-            MessageBox.Show(shuffled[0].ToString());
             int counter = 0;
             matrix = new int[size, size];
             Random r = new();
@@ -62,9 +61,9 @@ namespace TikTakTo
                 {
                     Button b = new();
                     b.Content = matrix[i, j];
-                    if (b.Content == "9")
+                    if (matrix[i, j] == 9)
                     {
-                        b.Background = new SolidColorBrush(Colors.Gray); b.Foreground = new SolidColorBrush(Colors.Gray);
+                        b.Background = new SolidColorBrush(Colors.Gray); b.Foreground= new SolidColorBrush(Colors.Gray);
                     }
                     b.HorizontalAlignment = HorizontalAlignment.Stretch;
                     b.VerticalAlignment = VerticalAlignment.Stretch;
