@@ -44,5 +44,29 @@ namespace TikTakTo
                 }
             }
         }
+
+        private void RandomO()
+        {
+            var szabadMezok = new System.Collections.Generic.List<Button>();
+            foreach (Button b in mezok)
+            {
+                if (b.Content == null)
+                {
+                    szabadMezok.Add(b);
+                }
+            }
+            if (szabadMezok.Count > 0)
+            {
+                int i = r.Next(szabadMezok.Count);
+                szabadMezok[i].Content = "O";
+                jatekosKor = true;
+                Ellenorzes();
+            }
+        }
+
+        private void Ellenorzes()
+        {
+
+        }
     }
 }
