@@ -30,9 +30,19 @@ namespace TikTakTo
             mezok = new Button[3, 3] { { mezo11, mezo12, mezo13 }, { mezo21, mezo22, mezo23 }, { mezo31, mezo32, mezo33 } };
             }
 
-        private void mezo11_Click(object sender, RoutedEventArgs e)
+        private void mezo_Click(object sender, RoutedEventArgs e)
         {
-
+            Button b = (Button)sender;
+            if (b.Content == null && jatekosKor)
+            {
+                b.Content = "X";
+                jatekosKor = false;
+                Ellenorzes();
+                if (!jatekosKor)
+        {
+                    RandomO();
+                }
+            }
         }
     }
 }
