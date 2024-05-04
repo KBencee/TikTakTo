@@ -20,9 +20,9 @@ namespace TikTakTo
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Button[,] mezok;
+        private readonly Button[,] mezok;
         private bool jatekosKor = true;
-        private Random r = new();
+        private readonly Random r = new();
 
         public MainWindow()
         {
@@ -66,7 +66,57 @@ namespace TikTakTo
 
         private void Ellenorzes()
         {
-
+            for (int i = 0; i < 3; i++)
+            {
+                if (mezok[i, 0].Content != null && mezok[i, 0].Content == mezok[i, 1].Content && mezok[i, 0].Content == mezok[i, 2].Content)
+                {
+                    MessageBox.Show($"{ mezok[i, 0].Content} nyert! :D");
+                    Ujraindit();
+                    return;
+                }
+                if (mezok[0, i].Content != null && mezok[0, i].Content == mezok[1, i].Content && mezok[0, i].Content == mezok[2, i].Content)
+                {
+                    MessageBox.Show($"{mezok[0, i].Content} nyert! :D");
+                    Ujraindit();
+                    return;
+                }
         }
+            if (mezok[0,0].Content != null && mezok[0,0].Content == mezok[1,1].Content && mezok[0,0].Content == mezok[2,2].Content)
+            {
+                MessageBox.Show($"{mezok[0,0].Content} nyert! :D");
+                Ujraindit();
+                return;
+            }
+            if (mezok[0, 2].Content != null && mezok[0, 2].Content == mezok[1, 1].Content && mezok[0, 2].Content == mezok[2, 0].Content)
+            {
+                MessageBox.Show($"{mezok[0, 2].Content} nyert! :D");
+                Ujraindit();
+                return;
+            }
+
+            bool dontetlen = true;
+            foreach (Button b in mezok) 
+            { 
+                if (b.Content == null)
+                {
+                    dontetlen = false;
+                    break;
+                }
+            }
+            if (dontetlen)
+            {
+                MessageBox.Show("Döntetlen... :/");
+                Ujraindit();
+            }
+        }
+
+        private void Ujraindit()
+        {
+            foreach (Button b in mezok)
+            {
+                b.Content = null;
+            }
+            jatekosKor = true;
     }
+}
 }
