@@ -5,12 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TikTakTo"
         mc:Ignorable="d"
-        Title="TiliToli" Height="450" Width="500">
+        Title="Amőba" Height="600" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Grid.Row="1" x:Name="JatekGrid">
-        </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="" x:Name="mezo11" Grid.Column="0" Grid.Row="0" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo12" Grid.Column="1" Grid.Row="0" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo13" Grid.Column="2" Grid.Row="0" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo21" Grid.Column="0" Grid.Row="1" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo22" Grid.Column="1" Grid.Row="1" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo23" Grid.Column="2" Grid.Row="1" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo31" Grid.Column="0" Grid.Row="2" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo32" Grid.Column="1" Grid.Row="2" Click="mezo_Click"/>
+        <Button Content="" x:Name="mezo33" Grid.Column="2" Grid.Row="2" Click="mezo_Click"/>
     </Grid>
 </Window>
