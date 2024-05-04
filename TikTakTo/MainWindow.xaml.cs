@@ -70,26 +70,38 @@ namespace TikTakTo
             {
                 if (mezok[i, 0].Content != null && mezok[i, 0].Content == mezok[i, 1].Content && mezok[i, 0].Content == mezok[i, 2].Content)
                 {
-                    MessageBox.Show($"{ mezok[i, 0].Content} nyert! :D");
+                    if (mezok[i, 0].Content == "X")
+                        MessageBox.Show("Nyertél!");
+                    else
+                        MessageBox.Show("Vesztettél.");
                     Ujraindit();
                     return;
                 }
                 if (mezok[0, i].Content != null && mezok[0, i].Content == mezok[1, i].Content && mezok[0, i].Content == mezok[2, i].Content)
                 {
-                    MessageBox.Show($"{mezok[0, i].Content} nyert! :D");
+                    if (mezok[0, i].Content == "X")
+                        MessageBox.Show("Nyertél!");
+                    else
+                        MessageBox.Show("Vesztettél.");
                     Ujraindit();
                     return;
                 }
         }
             if (mezok[0,0].Content != null && mezok[0,0].Content == mezok[1,1].Content && mezok[0,0].Content == mezok[2,2].Content)
             {
-                MessageBox.Show($"{mezok[0,0].Content} nyert! :D");
+                if (mezok[0, 0].Content == "X")
+                    MessageBox.Show("Nyertél!");
+                else
+                    MessageBox.Show("Vesztettél.");
                 Ujraindit();
                 return;
             }
             if (mezok[0, 2].Content != null && mezok[0, 2].Content == mezok[1, 1].Content && mezok[0, 2].Content == mezok[2, 0].Content)
             {
-                MessageBox.Show($"{mezok[0, 2].Content} nyert! :D");
+                if (mezok[0, 2].Content == "X")
+                    MessageBox.Show("Nyertél!");
+                else
+                    MessageBox.Show("Vesztettél.");
                 Ujraindit();
                 return;
             }
