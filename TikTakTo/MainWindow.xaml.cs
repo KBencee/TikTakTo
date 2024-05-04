@@ -20,9 +20,14 @@ namespace TikTakTo
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Button[,] mezok;
+        private bool jatekosKor = true;
+        private Random r = new();
+
         public MainWindow()
         {
             InitializeComponent();
+            mezok = new Button[3, 3] { { mezo11, mezo12, mezo13 }, { mezo21, mezo22, mezo23 }, { mezo31, mezo32, mezo33 } };
             }
 
         private void mezo11_Click(object sender, RoutedEventArgs e)
