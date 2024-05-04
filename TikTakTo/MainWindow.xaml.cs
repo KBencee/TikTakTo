@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,13 +22,14 @@ namespace TikTakTo
     public partial class MainWindow : Window
     {
         private readonly Button[,] mezok;
-        private bool jatekosKor = true;
+        private bool jatekosKor = false;
         private readonly Random r = new();
 
         public MainWindow()
         {
             InitializeComponent();
             mezok = new Button[3, 3] { { mezo11, mezo12, mezo13 }, { mezo21, mezo22, mezo23 }, { mezo31, mezo32, mezo33 } };
+            RandomO();
             }
 
         private void mezo_Click(object sender, RoutedEventArgs e)
@@ -128,7 +130,8 @@ namespace TikTakTo
             {
                 b.Content = null;
             }
-            jatekosKor = true;
+            jatekosKor = false;
+            RandomO();
     }
 }
 }
