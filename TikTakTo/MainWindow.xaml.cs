@@ -30,7 +30,7 @@ namespace TikTakTo
             InitializeComponent();
             mezok = new Button[3, 3] { { mezo11, mezo12, mezo13 }, { mezo21, mezo22, mezo23 }, { mezo31, mezo32, mezo33 } };
             RandomO();
-            }
+        }
 
         private void mezo_Click(object sender, RoutedEventArgs e)
         {
@@ -38,13 +38,14 @@ namespace TikTakTo
             if (b.Content == null && jatekosKor)
             {
                 b.Content = "X";
+                b.Foreground = Brushes.Blue;
                 jatekosKor = false;
                 Ellenorzes();
                 if (!jatekosKor)
-        {
+                {
                     RandomO();
                 }
-            }
+            }   
         }
 
         private void RandomO()
@@ -61,6 +62,7 @@ namespace TikTakTo
             {
                 int i = r.Next(szabadMezok.Count);
                 szabadMezok[i].Content = "O";
+                szabadMezok[i].Foreground = Brushes.Red;
                 jatekosKor = true;
                 Ellenorzes();
             }
@@ -88,7 +90,7 @@ namespace TikTakTo
                     Ujraindit();
                     return;
                 }
-        }
+            }
             if (mezok[0,0].Content != null && mezok[0,0].Content == mezok[1,1].Content && mezok[0,0].Content == mezok[2,2].Content)
             {
                 if (mezok[0, 0].Content == "X")
@@ -132,6 +134,6 @@ namespace TikTakTo
             }
             jatekosKor = false;
             RandomO();
+        }
     }
-}
 }

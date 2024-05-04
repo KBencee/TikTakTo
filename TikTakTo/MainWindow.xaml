@@ -17,14 +17,14 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Name="mezo11" Grid.Column="0" Grid.Row="0" Click="mezo_Click"/>
-        <Button Name="mezo12" Grid.Column="1" Grid.Row="0" Click="mezo_Click"/>
-        <Button Name="mezo13" Grid.Column="2" Grid.Row="0" Click="mezo_Click"/>
-        <Button Name="mezo21" Grid.Column="0" Grid.Row="1" Click="mezo_Click"/>
-        <Button Name="mezo22" Grid.Column="1" Grid.Row="1" Click="mezo_Click"/>
-        <Button Name="mezo23" Grid.Column="2" Grid.Row="1" Click="mezo_Click"/>
-        <Button Name="mezo31" Grid.Column="0" Grid.Row="2" Click="mezo_Click"/>
-        <Button Name="mezo32" Grid.Column="1" Grid.Row="2" Click="mezo_Click"/>
-        <Button Name="mezo33" Grid.Column="2" Grid.Row="2" Click="mezo_Click"/>
+        <Button Name="mezo11" Grid.Column="0" Grid.Row="0" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo12" Grid.Column="1" Grid.Row="0" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo13" Grid.Column="2" Grid.Row="0" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo21" Grid.Column="0" Grid.Row="1" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo22" Grid.Column="1" Grid.Row="1" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo23" Grid.Column="2" Grid.Row="1" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo31" Grid.Column="0" Grid.Row="2" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo32" Grid.Column="1" Grid.Row="2" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
+        <Button Name="mezo33" Grid.Column="2" Grid.Row="2" Click="mezo_Click" Background="BurlyWood" FontSize="100"/>
     </Grid>
 </Window>
