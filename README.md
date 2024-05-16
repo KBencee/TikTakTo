@@ -7,3 +7,6 @@ Amőba játék:
  - ezt követően ismét az ellenfél jön, majd utána a játékos, egeszén addig amég nem nyer valaki vagy egyik négyzet sem marad üresen
  - ha kigyűlik azonos betűből 3 egy sorban, oszlopban vagy ferdén, akkor az a betű nyer amiből kigyűlt
  - játék vége után automatikusan újraindul
+
+
+(az osztály fele ezt csinálta, ezért nem nagyon akartam vele untatni Tanárurat, így nem mutattam be...)
